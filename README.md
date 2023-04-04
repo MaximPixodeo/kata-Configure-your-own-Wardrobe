@@ -1,98 +1,19 @@
-# PHP template project
+#Configure your own Wardrobe
 
-My template for PHP project or exercise (Kata)
+Imagine you have just moved into your new apartment, and then you notice that you still need a new wardrobe for your dressing room. Regrettably, you won’t find a wardrobe that fits exactly to the size of your wall. But fortunately, the Swedish furniture dealer of your choice offers you the opportunity to build your own, customized wardrobe by combining individual wardrobe elements.
 
-## Getting started
+The wardrobe elements are available in the following sizes: 50cm, 75cm, 100cm, and 120cm. The wall on which the wardrobe elements are placed has a total length of 250cm. With which combinations of wardrobe elements can you make the most of the space?
 
-### Clone the repository
-```shell
-git clone https://github.com/klnjmm/template-php.git your-project-name
-cd your-project-name
-```
+Write a function that returns all combinations of wardrobe elements that exactly fill the wall.
 
-### Modify composer.json file
-* General informations like project name, description and license
-```json
-    "name": "klnjmm/template",
-    "description": "My template for PHP project",
-    "type": "project",
-    "license": "MIT",
-```
+##Additional Task
 
-### Init
-#### On Unix or Mac OS X system
-```shell
-make init
-make up
-```
+Here is the price list for the available wardrobe elements:
 
-#### On Windows
-```shell
-rmdir /s /q .git
-git init
-composer install
-```
+50cm => 59 USD
+75cm => 62 USD
+100cm => 90 USD
+120cm => 111 USD
+Write a second function that checks which of the resulting combinations is the cheapest one.
 
-
-Let's code ! 🚀
-
-## Developing
-
-### On Unix or Mac OS X system
-Here a few commands that can help you :
-
-* Launch unit tests
-```shell
-make unit-tests
-```
-
-* Launch unit tests with coverage
-```shell
-make unit-tests-coverage
-```
-
-* Launch mutation testing
-```shell
-make mutation
-```
-
-* Launch code sniffer
-```
-make code-sniffer
-```
-
-* Fix code style
-```
-make code-sniffer-fix
-```
-
-### On Windows
-Here a few commands that can help you :
-
-* Launch unit tests
-```shell
-vendor\bin\pest.bat
-```
-
-* Launch unit tests with coverage
-```shell
-vendor\bin\pest.bat --coverage
-```
-
-* Launch mutation testing (doesn't work on windows...)
-```shell
-vendor\bin\infection.bat --test-framework=pest --show-mutations
-```
-
-* Launch code sniffer
-```
-vendor\bin\phpcs.bat
-```
-
-* Launch code sniffer
-```
-vendor\bin\phpcbf.bat
-```
-
-## Licensing
-Do whatever you want with this !
+Starting Points
