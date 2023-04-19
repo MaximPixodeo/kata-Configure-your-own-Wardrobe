@@ -6,11 +6,8 @@ namespace App;
 class Wall
 {
 
-    private $totalLength;
-
-    public function __construct()
+    public function __construct(private int $totalLength)
     {
-        $this->totalLength = 250;
     }
 
     public function totalLength(): int
@@ -30,10 +27,60 @@ class Wall
         foreach ($elements as $size) {
             if (is_int($this->getOneCombinationElement($size))) {
                 $result[] = [$this->getOneCombinationElement($size) => $size];
+            } else {
+                $result[] = [$this->getCombinationWithMultipleElements($size, $elements) => $size];
             }
         }
 
+        print_r($result);
         return $result;
     }
 
+    private function getCombinationWithMultipleElements($size, $elements)
+    {
+        $elementsLength = 0;
+        $compteur = 0;
+        $i = 0;
+
+        while ($elementsLength <= $this->totalLength) {
+            $elementsLength += $size;
+
+            // if (is_int($this->getTwoCombinationElements($elements[$i], $elementsLength))) {
+            //     $elementsLength += $this->getTwoCombinationElements($elements[$i], $elementsLength) * $elements[$i];
+            // }
+            
+            $compteur++;
+            $i++;
+        }
+    }
+
+    public function getTwoCombinationElements(int $elementSize, int $elementsLength): int|float
+    {
+        return $elementsLength / $elementSize;
+    }
+
+    public function calculateBis(array $elements)
+    {
+        $result = [];
+
+        foreach($elements => $size)
+        {
+            //50
+            while($lengthWall <= 250)
+            {
+                $sumSizeElement += $size // 50
+
+                //5 itérations pour arriver à 250
+
+                //ajouter une condition
+                if(is_int($this->getOneCombinationElement($sumSizeElement))){
+
+                }
+            }
+        }
+    
+
+    
+        return $result;
+    }
 }
